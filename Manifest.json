@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Proxy Switcher",
+    "version": "1.0",
+    "description": "Enables/disables a SOCKS5 proxy",
+    "permissions": ["activeTab", "proxy", "storage"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
