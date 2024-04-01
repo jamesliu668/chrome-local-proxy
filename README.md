@@ -21,3 +21,20 @@ Chrome give me an error, and I asked Gemini to solve it, but failed. So I manual
 ```
 browser_action get an error: 'browser_action' requires manifest version of 2 or lower.
 ```
+
+### Prompts #2:
+I want to improve the extension by clicking the extension to trigger the proxy setting. I am using following prompt.
+```
+please improve the extension. Can I just enable or disable the proxy by clicking the icon, instead of the button in popup page
+
+```
+
+The main logic is write, but only set icon is wrong. So I change a little to make it works.
+
+### For icons
+I am using Gemini to create the icons, but it cannot help me just change the background color. So just create a gray and a green icon for enable/disable state. Here are the promps to create icons:
+```
+help draw a picture for me . the size is 16x16, background color is gray, the center is a switcher
+help draw a picture for me . the size is 16x16, background color is green switcher
+```
+Unfortunately, it was unable to create a 16x16 picture, but rather a 1000-pixel image. As a solution, I resized the image manually using GIMP.
