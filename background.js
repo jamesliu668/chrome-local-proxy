@@ -1,9 +1,10 @@
 const PROXY_ENABLED_KEY = "proxyEnabled";
 
-// chrome.runtime.onStartup.addListener(() => {
-//     // Update icon based on initial proxy state
-//     updateIcon();
-// });
+chrome.runtime.onStartup.addListener(async () => {
+  // Set default proxy state to disabled on launch
+  chrome.storage.local.set({ [PROXY_ENABLED_KEY]: false });
+  await setProxyState(false);
+});
 
 chrome.runtime.onInstalled.addListener(() => {
   // Set default proxy state to disabled on installation
